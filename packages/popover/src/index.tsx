@@ -17,16 +17,19 @@ import type * as Polymorphic from "@reach/utils/polymorphic";
  * Popover
  */
 const Popover = React.forwardRef(function Popover(props, ref) {
-  return (
-    <Portal>
-      <PopoverImpl ref={ref} {...props} />
-    </Portal>
-  );
+  if (props.portal)
+    return (
+      <Portal>
+        <PopoverImpl ref={ref} {...props} />
+      </Portal>
+    );
+  else return <PopoverImpl ref={ref} {...props} />;
 }) as Polymorphic.ForwardRefComponent<"div", PopoverProps>;
 
 interface PopoverProps {
   children: React.ReactNode;
   targetRef: React.RefObject<PossibleNode>;
+  portal?: boolean;
   position?: Position;
   /**
    * Render the popover markup, but hide it – used by MenuButton so that it
