@@ -27,9 +27,9 @@
     "react": "^16.8.0 || 17.x",
     "react-dom": "^16.8.0 || 17.x"
   },
-  "main": "dist/reach-popover.cjs.js",
-  "module": "dist/reach-popover.esm.js",
-  "types": "dist/reach-popover.cjs.d.ts",
+  "main": "dist/popover-reach-fr.cjs.js",
+  "module": "dist/popover-reach-fr.esm.js",
+  "types": "dist/popover-reach-fr.cjs.d.ts",
   "files": [
     "README.md",
     "dist"
